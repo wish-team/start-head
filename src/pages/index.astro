@@ -5,15 +5,15 @@ import Chip from "../components/chip.astro";
 // Put all your links here
 const links: Link[] = [
   {
-    desc: "Example Project", // The text that will be rendered
+    desc: "Register Free the Decentralized Startup Webinar", // The text that will be rendered
     link: "example.com", // The link
-    icon: "fa-solid fa-home", // An icon from Font Awesome: https://fontawesome.com/search?o=r&m=free
+    icon: "fa-solid fa-ticket", // An icon from Font Awesome: https://fontawesome.com/search?o=r&m=free
   },
-  {
-    desc: "Cool Project",
-    link: "example.com",
-    icon: "fa-solid fa-store",
-  },
+  // {
+  //   desc: "About Us",
+  //   link: "example.com",
+  //   icon: "fa-solid fa-store",
+  // },
 ];
 ---
 
@@ -30,7 +30,7 @@ const links: Link[] = [
       referrerpolicy='no-referrer'
     />
     <meta name='generator' content={Astro.generator} />
-    <meta name='description' content='Useful links of Neville Brem' />
+    <meta name='description' content='Start Head, a community for decentralized startups.' />
     <meta name='author' content='Neville Brem' />
     <meta property='og:title' content='Neville Brem' />
     <meta property='og:image' content='favicon.png' />
@@ -40,7 +40,7 @@ const links: Link[] = [
     <meta property='twitter:image' content='favicon.png' />
     <meta name='twitter:card' content='summary' />
     <meta name='twitter:site' content='@BremNeville' />
-    <title>Links of Neville Brem</title>
+    <title>Srart Head</title>
     <style>
       @font-face {
         font-family: Kodchasan;
@@ -54,6 +54,7 @@ const links: Link[] = [
   >
     <main class='w-[80%] flex flex-col gap-8'>
       <h1 class='md:text-6xl text-4xl font-black text-center text-primary'>START HEAD</h1>
+      <p class='text-center mx-auto'>Register our webinar for the </p>
       <div class='grid justify-center gap-4'>
         {
           links.map(({ desc, link, icon }) => {
