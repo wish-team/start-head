@@ -1,7 +1,7 @@
 ---
 import Card from "../components/card.astro";
 import Chip from "../components/chip.astro";
-
+import Globalstyle from "../components/globalstyle.astro";
 // Put all your links here
 const links: Link[] = [
   {
@@ -20,7 +20,7 @@ const links: Link[] = [
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <link rel='icon' type='image/x-icon' href='/favicon.png' />
+    <link rel='icon' type='image/x-icon' href='/favicon-32x32.png' />
     <meta name='viewport' content='width=device-width' />
     <link
       rel='stylesheet'
@@ -30,17 +30,22 @@ const links: Link[] = [
       referrerpolicy='no-referrer'
     />
     <meta name='generator' content={Astro.generator} />
-    <meta name='description' content='Start Head, a community for decentralized startups.' />
-    <meta name='author' content='Neville Brem' />
-    <meta property='og:title' content='Neville Brem' />
-    <meta property='og:image' content='favicon.png' />
+    <meta name='description' content='Start Head, decentralized accelerator for decentralized startups.' />
+    <meta name='author' content='Start Head' />
+    <meta property='og:title' content='Start Head' />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property='og:image' content='/favicon-32x32.png' />
     <meta property='og:description' content='Linktree of Neville Brem' />
-    <meta property='twitter:description' content='Linktree of Neville Brem' />
-    <meta property='twitter:title' content='Neville Brem' />
+    <meta property='twitter:description' content='Start Head, decentralized accelerator for decentralized startups.' />
+    <meta property='twitter:title' content='Start Head' />
     <meta property='twitter:image' content='favicon.png' />
     <meta name='twitter:card' content='summary' />
-    <meta name='twitter:site' content='@BremNeville' />
+    <meta name='twitter:site' content='@starthead' />
     <title>Srart Head</title>
+    <Globalstyle/>
     <style>
       @font-face {
         font-family: Kodchasan;
@@ -68,9 +73,9 @@ const links: Link[] = [
         <!-- Put some social links who have a definitive icon here: -->
         <Chip link='youtube.com/' icon='fa-brands fa-youtube' />
         <Chip link='github.com/' icon='fa-brands fa-github' />
-        <Chip link='x.com/' icon='fa-brands fa-x-twitter' />
+        <Chip link='https://www.linkedin.com/company/start-head/' icon='fa-brands fa-linkedin' />
       </div>
-      <p class='text-center mx-auto'>All rights Reserved StartHead</p>
+      <p class='text-center mx-auto'>StartHead©, All rights Reserved.</p>
     </main>
   </body>
 </html>

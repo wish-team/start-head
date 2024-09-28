@@ -12,9 +12,13 @@
   "dependencies": {
     "@astrojs/check": "^0.5.3",
     "@astrojs/tailwind": "^5.1.0",
+    "@tsparticles/engine": "^3.5.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.5.0",
     "astro": "^4.3.6",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
