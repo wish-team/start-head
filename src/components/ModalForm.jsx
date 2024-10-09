@@ -80,7 +80,7 @@ export default function ModalForm() {
 
   return (
     <>
-      <Button onClick={() => setOpenModal(true)}>Register Event Now!</Button>
+      <Button onClick={() => setOpenModal(true)}><i className="fa-solid fa-wand-magic-sparkles"></i>Register Event Now!</Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
         <Modal.Header />
         <Modal.Body>
@@ -148,9 +148,9 @@ export default function ModalForm() {
                   <div className="flex justify-center items-center mt-2">
                   <AddToCalendarButton name="Decentralized Startups"
                      description="event at the link https://meet.google.com/utc-pnxf-fxy"
-                     startDate="2024-19-22"
+                     startDate="2024-10-19"
                      startTime="16:00"
-                     endDate="2024-19-22"
+                     endDate="2024-10-19"
                      endTime="20:00"
                      timeZone="UTC"
                      location="World Wide Web"

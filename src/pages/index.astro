@@ -1,5 +1,6 @@
 ---
 import ModalForm from '../components/ModalForm'
+import { Button } from "flowbite-react";
 import Card from "../components/card.astro";
 import Chip from "../components/chip.astro";
 import Globalstyle from "../components/globalstyle.astro";
@@ -64,7 +65,8 @@ const links: Link[] = [
       <img class="max-w-24" src="/logo-starthead.png"/>
       <h1 class='md:text-6xl text-4xl font-black text-center text-primary'>START HEAD</h1>
       <p class='text-center mx-auto'>Decentralized Accelerator</p>
-      <p class='text-center mx-auto'>Register our virtual event on October 19 - 4 PM UTC for gaining insight on how to found a decentralized startup.</p>
+      <p class='text-center mx-auto'>Register our free virtual event on <b class="text-primary">October 19 at 4 P.M. UTC</b> for gaining insight on how to found a decentralized startup.</p>
+      <p class="text-red-300">Attention: the capacity of the virtual event is limited.</p>
       <div class='grid justify-center gap-4'>
         
         <ModalForm client:load/>
@@ -74,10 +76,9 @@ const links: Link[] = [
           })
         } -->
       </div>
+      <p class='text-center mx-auto'>Mint Your Head for Free as an Start Head!</p>
+      <Button><span class="fa-solid  fa-arrow-down"></span>Mint Head</Button>
       <div class='flex justify-center gap-8'>
-        
-   
-
         <!-- Modal toggle -->
         
         <!-- Put some social links who have a definitive icon here: -->
