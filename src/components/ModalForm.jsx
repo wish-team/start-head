@@ -80,7 +80,7 @@ export default function ModalForm() {
 
   return (
     <>
-      <Button onClick={() => setOpenModal(true)}><i className="fa-solid fa-wand-magic-sparkles"></i>Register Event Now!</Button>
+      <Button onClick={() => setOpenModal(true)}><i className="fa-solid fa-wand-magic-sparkles flex items-center pr-2"></i>Register Event Now!</Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
         <Modal.Header />
         <Modal.Body>
@@ -96,12 +96,13 @@ export default function ModalForm() {
                   </div>
                   <TextInput
                     id="name"
+                    placeholder="Amirhosein Shirani"
                     type="text"
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                     required
                     color={errors.name ? 'failure' : ''}
-                    style={{ color: '#1e1e1e' }}
+                    style={{ color: '#1e1e1e'  }}
                   />
                   {errors.name && <p className="text-sm text-red-600">{errors.name}</p>}
                 </div>
