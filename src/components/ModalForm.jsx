@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Label, Modal, TextInput, Spinner } from "flowbite-react";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import CopyToClipboardButton from './CopyToClipBoard';
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
@@ -13,6 +13,16 @@ export default function ModalForm() {
   const [errors, setErrors] = useState({ name: '', email: '' });
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState(''); // New state for submission error
+  
+  useEffect(() => {
+    const cachedName = localStorage.getItem('registeredName');
+    const cachedEmail = localStorage.getItem('registeredEmail');
+    if (cachedName && cachedEmail) {
+      setName(cachedName);
+      setEmail(cachedEmail);
+      setStep(1); // Skip to step 2 if data is found
+    }
+  }, [openModal]);
 
   function onCloseModal() {
     setOpenModal(false);
@@ -64,6 +74,8 @@ export default function ModalForm() {
         .then(() => {
           // Since the response is opaque, assume success if no errors occur.
           setLoading(false);
+          localStorage.setItem('registeredName', name);
+          localStorage.setItem('registeredEmail', email);
           setStep(1); // Move to the next step
         })
         .catch(error => {
