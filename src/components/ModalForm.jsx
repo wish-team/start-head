@@ -63,7 +63,7 @@ export default function ModalForm() {
         name: name,
         email: email
       };
-      fetch('https://script.google.com/macros/s/AKfycbw0HS84BTxAo3erO1uRpTBReu0nlUX3fGp2YtJpDmFq2RiGkVL47ogsL7fvhcUkA82p/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbyXxdjc7p1Y7kfPVGV_KrpskeahVsMgASglQdDbBycPu71rNRODeZrePCYV0Ff3o55K/exec', {
         method: 'POST',
         mode: 'no-cors',  // This will bypass CORS issues but returns an opaque response
         headers: {
@@ -74,7 +74,7 @@ export default function ModalForm() {
         .then(() => {
           // Since the response is opaque, assume success if no errors occur.
           setLoading(false);
-          localStorage.setItem('registeredName', name);
+          localStorage.setItem('registeredName', name)
           localStorage.setItem('registeredEmail', email);
           setStep(1); // Move to the next step
         })
@@ -157,21 +157,21 @@ export default function ModalForm() {
                   <div>
                     <div className="flex gap-4 justify-between border-solid border-2 border-primary bg-[#1e1e1e] p-4 rounded-md">
                       <h3 className="text-sm font-medium text-white dark:text-white">
-                        https://meet.google.com/utc-pnxf-fxy
+                      https://meet.google.com/sqr-jfth-okd
                       </h3>
-                      <CopyToClipboardButton content={'https://meet.google.com/utc-pnxf-fxy'} />
+                      <CopyToClipboardButton content={'https://meet.google.com/sqr-jfth-okd'} />
                     </div>
                     <div className="flex justify-center items-center mt-2">
                       <AddToCalendarButton 
                         name="Decentralized Startups"
-                        description="event at the link https://meet.google.com/utc-pnxf-fxy"
+                        description="event at the link https://meet.google.com/sqr-jfth-okd"
                         startDate="2024-10-19"
                         startTime="16:00"
                         endDate="2024-10-19"
                         endTime="20:00"
                         timeZone="UTC"
                         location="World Wide Web"
-                        organizer="Wish Work|info@wishwork.org"
+                        organizer="Start Head | admin@starthead.world"
                         options={['Apple','Google','iCal','Outlook.com','Yahoo']}
                         buttonStyle="round"
                       ></AddToCalendarButton>
