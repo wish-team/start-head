@@ -23,7 +23,7 @@ const CopyToClipboardButton = ({ content }) => {
   return (
     <div>
       <button className="text-white dark:text-white" onClick={() => copyToClipboard(content)}>
-        {isCopied ? 'Copied!' : <i className={'fa-regular fa-clipboard text-base my-auto'}></i>}
+        {isCopied ? <p className='text-sm'>Copied!</p> : <i className={'fa-regular fa-clipboard text-base my-auto'}></i>}
       </button>
     </div>
   );
