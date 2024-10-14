@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: {
+        24: '6rem', // Ensure this value exists
+      },
       colors: {
         'primary': '#FFD800',
         'primary-focus': '#E0BF00'
