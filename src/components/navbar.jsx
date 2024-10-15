@@ -10,6 +10,7 @@ export default function Navigationbar() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setActivePath(window.location.pathname); // Safely set the active path
+      console.log("activePath", activePath)
     }  }, []);
 
   // Toggle the mobile menu
