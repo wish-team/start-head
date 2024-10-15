@@ -8,8 +8,9 @@ export default function Navigationbar() {
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu
 
   useEffect(() => {
-    setActivePath(window.location.pathname); // Detect current page path
-  }, []);
+    if (typeof window !== 'undefined') {
+      setActivePath(window.location.pathname); // Safely set the active path
+    }  }, []);
 
   // Toggle the mobile menu
   const handleToggle = () => {
