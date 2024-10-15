@@ -42,7 +42,7 @@ export default function Navigationbar() {
             <Navbar.Collapse className="flex flex-col gap-4 overflow-auto">
               <Navbar.Link
                 href="/vision"
-                className={`px-4 py-2 rounded-sm border-none hover:text-primary ${activePath === '/vision' ? 'text-primary bg-[#1e1e1e]' : 'text-white'} transition-all`}
+                className={`px-4 py-2 rounded-sm border-none hover:text-primary ${activePath === '/vision/' ? 'text-primary bg-[#1e1e1e]' : 'text-white'} transition-all`}
                 style={{ margin: '0.5rem 1rem' }}
               >
                 Vision
@@ -56,7 +56,7 @@ export default function Navigationbar() {
               </Navbar.Link>
               <Navbar.Link
                 href="/team"
-                className={`px-4 py-2 rounded-sm border-none ${activePath === '/team' ? 'text-primary bg-[#1e1e1e]' : 'text-white'} transition-all`}
+                className={`px-4 py-2 rounded-sm border-none ${activePath === '/team/' ? 'text-primary bg-[#1e1e1e]' : 'text-white'} transition-all`}
                 style={{ margin: '0.5rem 1rem' }}
               >
                 Team
