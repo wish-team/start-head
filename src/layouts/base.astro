@@ -1,5 +1,4 @@
 ---
-import Navigationbar from '../components/navbar';
 import Globalstyle from "../components/globalstyle.astro";
 // Put all your links here
 const { title, description } = Astro.props;
@@ -61,10 +60,6 @@ const { title, description } = Astro.props;
     </style>
   </head>
   <body class='bg-[#1e1e1e] flex flex-col justify-start items-center font-[Kodchasan] text-white'>
-    <Navigationbar client:load/>
-
-    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24'>
-        <slot/>
-    </main>
+    <slot/>
   </body>
 </html>
