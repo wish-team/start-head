@@ -19,11 +19,11 @@ export default function Navigationbar() {
   };
 
   return (
-    <div className="w-full mt-8 md:flex justify-center">
+    <div className="w-full mb-12 mt-8 md:flex justify-center">
       <Navbar
         fluid={true}
         rounded={true}
-        className="relative ml-2 bg-white bg-opacity-10 fixed h-auto backdrop-blur-lg border border-white border-opacity-20 shadow-md rounded-lg px-4 md:px-8 py-2 md:py-4"
+        className="relative ml-2 bg-white bg-opacity-10 fixed h-auto backdrop-blur-lg border z-50 border-white border-opacity-20 shadow-md rounded-lg px-4 md:px-8 py-2 md:py-4"
       >
         {/* Hamburger Icon for Mobile Screens */}
         <button
@@ -39,7 +39,8 @@ export default function Navigationbar() {
 
         {/* Mobile Menu: shown when the hamburger is clicked */}
         {isOpen && (
-          <div className="top-12 left-0 w-full h-screen z-40">
+          <div className="top-12 mb-12 left-0 w-full h-[calc(100vh-10rem)] z-60 relative">
+            <div className="h-[calc(100vh-2rem)] mb-8">
             <Navbar.Collapse className="flex flex-col gap-4 overflow-auto">
               <Navbar.Link
                 href="/vision"
@@ -63,6 +64,7 @@ export default function Navigationbar() {
                 Team
               </Navbar.Link>
             </Navbar.Collapse>
+            </div>
           </div>
         )}
 
