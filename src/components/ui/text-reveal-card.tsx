@@ -67,13 +67,13 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#1e1e1e] w-[48rem] rounded-lg p-8 relative overflow-hidden",
+        "bg-[#1e1e1e] w-[52rem] rounded-lg p-8 relative overflow-hidden",
         className
       )}
     >
       {children}
 
-      <div className="h-40  relative flex items-center overflow-hidden">
+      <div className="h-40  relative flex items-center  justify-center overflow-hidden">
         <motion.div
           style={{
             width: "100%",
