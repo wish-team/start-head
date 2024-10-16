@@ -10,9 +10,12 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://starthead.world',
-  integrations: [tailwind(), react(), partytown({
+  integrations: [tailwind({
+    applyBaseStyles: false,
+  }), react(), partytown({
     config: {
       forward: ["dataLayer.push"],
     },
-}), sitemap()]
+}), sitemap()],
+output: "hybrid",
 });
