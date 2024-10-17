@@ -1,9 +1,14 @@
 ---
 import Globalstyle from "../components/globalstyle.astro";
 // Put all your links here
-const { title, description } = Astro.props;
+const { title, description, banner } = Astro.props;
 import "@/styles/global.css";
-
+let bannerBool;
+if (!banner) {
+    bannerBool = false;
+} else {
+    bannerBool = true;
+}
 ---
 
 <html lang='en'>
@@ -42,9 +47,27 @@ import "@/styles/global.css";
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta property='twitter:image' content='https://starthead.world/main_twitter_card.png' />
-    <meta property="image" content="https://starthead.world/main_twitter_card.png" />
-    <meta property="og:image" content="https://starthead.world/main_twitter_card.png" />
+    {
+      bannerBool ? (
+          <meta property="image" content={"https://starthead.world" + banner} />
+      ) : (
+          <meta property="image" content="https://starthead.world/main_twitter_card.png" />
+      )
+  }
+  {
+    bannerBool ? (
+        <meta property="og:image" content={"https://starthead.world" + banner} />
+    ) : (
+        <meta property="og:image" content="https://starthead.world/main_twitter_card.png" />
+    )
+}
+{
+  bannerBool ? (
+      <meta property="twitter:image" content={"https://starthead.world" + banner} />
+  ) : (
+      <meta property="twitter:image" content="https://starthead.world/main_twitter_card.png" />
+  )
+}
     <meta name='twitter:card' content='summary' />
     <meta property='og:description' content={description} />
     <meta property='twitter:description' content={description} />

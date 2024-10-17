@@ -88,7 +88,7 @@ const Roadmap = () => {
 
   return (
     <div>
-      {phases.map((phase, index) => {
+      {phases.map((phase, index, key) => {
         const ref = useRef(null);
         const inView = useInView(ref, { once: true }); // Trigger once when in view
 
