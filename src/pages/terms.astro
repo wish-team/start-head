@@ -1,0 +1,54 @@
+---
+import { Button } from "flowbite-react";
+import BaseLayout from "../layouts/base.astro";
+import Navigationbar from '../components/navbar';
+import Footer from '../components/footer.astro'; // Import the footer component
+
+---
+
+<BaseLayout title={"Terms"} description={"Terms and conditions for using the Start Head platform"}>
+    <Navigationbar client:load/>
+    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24 pb-20'>
+        <div>
+            <h1 class="my-4 md:text-8xl text-4xl font-black text-center text-primary">Terms and Conditions</h1>
+            <div class="my-6 p-8 border-primary">
+                <p class="text-left text-lg md:text-xl mx-auto">
+                    <b>1. Acceptance of Terms</b><br/>
+                    By accessing or using Start Head, you agree to comply with and be bound by these Terms of Service. If you do not agree, please refrain from using our services.
+                    <br/><br/>
+                    <b>2. Eligibility</b><br/>
+                    To use Start Head, you must be at least 18 years old or have permission from a legal guardian.
+                    <br/><br/>
+                    <b>3. Services</b><br/>
+                    Start Head provides educational content, events, and resources to help decentralized startups. We reserve the right to modify or discontinue services at any time.
+                    <br/><br/>
+                    <b>4. User Responsibilities</b><br/>
+                    Users agree to provide accurate information when registering for events and using our services. Misuse of our platform, including violating any laws, is strictly prohibited.
+                    <br/><br/>
+                    <b>5. Intellectual Property</b><br/>
+                    All content on Start Head, including text, images, and branding, is the property of Start Head unless otherwise stated. Unauthorized use of our intellectual property is prohibited.
+                    <br/><br/>
+                    <b>6. Limitation of Liability</b><br/>
+                    Start Head is not responsible for any direct or indirect damages resulting from the use of our services. All content is provided "as is" without warranties of any kind.
+                    <br/><br/>
+                    <b>7. Changes to Terms</b><br/>
+                    Start Head reserves the right to update these Terms at any time. Changes will be effective upon posting.
+                    <br/><br/>
+                    <b>8. Governing Law</b><br/>
+                    These Terms are governed by the laws applicable to Start Head’s jurisdiction.
+                </p>
+            </div>
+        </div>
+        <p class='text-center mx-auto'>StartHead©, All rights Reserved.</p>
+    </main>
+        <!-- Footer -->
+        <Footer />
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white/20 backdrop-blur-lg z-50 flex justify-center items-center py-4">
+        <a href="https://discord.gg/HADXy8Je" target="_blank">
+            <Button outline color="gray">
+                <span class="flex items-center fa-brands fa-discord pr-2"></span>
+                <span>Join Discord Channel</span>
+            </Button>
+        </a>
+    </div>
+</BaseLayout>

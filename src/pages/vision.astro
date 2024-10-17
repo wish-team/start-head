@@ -2,23 +2,27 @@
 import { Button } from "flowbite-react";
 import BaseLayout from "../layouts/base.astro";
 import Navigationbar from '../components/navbar';
+import Footer from '../components/footer.astro'; // Import the footer component
+
 import {
   TextRevealCard,
   TextRevealCardDescription,
   TextRevealCardTitle,
 } from "@/components/ui/text-reveal-card";
 ---
-<BaseLayout title={"Vision"} description={"The vision of the DAccelerator for the next generation of entrepreneurs, artists, scientists and creators"}>
-    <Navigationbar client:load/>
-    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24'>
+
+<BaseLayout title={"Vision"} description={"The vision of the DAccelerator for the next generation of entrepreneurs, artists, scientists, and creators"}>
+    <Navigationbar client:load />
+    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24 pb-36'>
+        <!-- Bottom padding increased for spacing from fixed button -->
         <div>
             <h1 class="my-4 md:text-8xl text-4xl font-black text-center text-primary">Vision</h1>
-        <div class="hidden md:flex justify-center items-center">
-            <TextRevealCard
-        text="Accelerator &nbsp&nbsp for &nbsp&nbsp Startups"
-        revealText="DAccelerator for DeStartups" client:load
-            ></TextRevealCard>
-        </div>
+            <div class="hidden md:flex justify-center items-center">
+                <TextRevealCard
+                    text="Accelerator &nbsp&nbsp for &nbsp&nbsp Startups"
+                    revealText="DAccelerator for DeStartups" client:load
+                ></TextRevealCard>
+            </div>
             <div class="my-6 p-8 border-double border-4 border-primary">
                 <p class="text-center text-lg md:text-xl mx-auto">
                     <b>DAccelerator: Empowering Global Entrepreneurship</b>
@@ -33,14 +37,18 @@ import {
                 </p>
             </div>
         </div>
-        <div class="md:hidden fixed bottom-0 left-0 w-full bg-white/20 backdrop-blur-lg z-50 flex justify-center items-center py-4">
-            <!-- The Button remains unchanged -->
-            <a href="https://discord.gg/HADXy8Je" target="_blank">
-              <Button outline color="gray">
-                <span class="flex items-center fa-brands fa-discord pr-2"></span>
-                <span>Join Discord Channel</span>
-              </Button>
-            </a>
-          </div>        <p class='text-center mx-auto'>StartHead©, All rights Reserved.</p>
     </main>
+    
+    <!-- Footer -->
+    <Footer />
+    
+    <!-- Fixed Button on Mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white/20 backdrop-blur-lg z-50 flex justify-center items-center py-4">
+        <a href="https://discord.gg/HADXy8Je" target="_blank">
+          <Button outline color="gray">
+            <span class="flex items-center fa-brands fa-discord pr-2"></span>
+            <span>Join Discord Channel</span>
+          </Button>
+        </a>
+    </div>       
 </BaseLayout>

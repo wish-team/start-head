@@ -1,0 +1,28 @@
+---
+const footerLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Team', href: '/team' },
+  { name: 'Vision', href: '/vision' },
+  { name: 'Privacy', href: '/policy' },
+  { name: 'Terms', href: '/terms' },
+];
+---
+
+<footer class="bg-neutral-900 text-white pt-4 pb-24 md:py-4 w-full">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <!-- Footer Links -->
+      <nav class="flex flex-col md:flex-row gap-4 md:gap-8 text-center">
+        {footerLinks.map(link => (
+          <a href={link.href} class="text-sm md:text-base hover:text-gray-400">
+            {link.name}
+          </a>
+        ))}
+      </nav>
+      <!-- Footer Text -->
+      <p class="text-xs md:text-sm mt-4 md:mt-0 text-center">
+        © StartHead, All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>

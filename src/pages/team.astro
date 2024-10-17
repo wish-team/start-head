@@ -2,12 +2,14 @@
 import { Button } from "flowbite-react";
 import BaseLayout from "../layouts/base.astro";
 import Navigationbar from '../components/navbar';
+import Footer from '../components/footer.astro'; // Import the footer component
 
+// import FramerStaggerButton from "../components/FramerStaggerButton.jsx"; // Import your React component
 ---
 
-<BaseLayout title={"Team"} description={"The team benind the idea and execution of Start Head"}>
+<BaseLayout title={"Team"} description={"The team behind the idea and execution of Start Head"}>
     <Navigationbar client:load/>
-    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24'>
+    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24 pb-20'>
         <div>
             <h1 class="my-8 md:text-6xl text-3xl font-black text-center text-primary">Team</h1>
             <div class="my-6 p-8 border-double border-4 border-primary">
@@ -19,15 +21,21 @@ import Navigationbar from '../components/navbar';
                 </p>
             </div>
         </div>
-        <div class="md:hidden fixed bottom-0 left-0 w-full bg-white/20 backdrop-blur-lg z-50 flex justify-center items-center py-4">
-            <!-- The Button remains unchanged -->
-            <a href="https://discord.gg/HADXy8Je" target="_blank">
-              <Button outline color="gray">
-                <span class="flex items-center fa-brands fa-discord pr-2"></span>
-                <span>Join Discord Channel</span>
-              </Button>
-            </a>
-          </div>
+
+        <!-- Load FramerStaggerButton only on the client side -->
+        <!-- <FramerStaggerButton client:load /> -->
+
         <p class='text-center mx-auto'>StartHead©, All rights Reserved.</p>
     </main>
+    <!-- Footer -->
+    <Footer />
+    <!-- Sticky Discord Button -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white/20 backdrop-blur-lg z-50 flex justify-center items-center py-4">
+        <a href="https://discord.gg/HADXy8Je" target="_blank">
+          <Button outline color="gray">
+            <span class="flex items-center fa-brands fa-discord pr-2"></span>
+            <span>Join Discord Channel</span>
+          </Button>
+        </a>
+    </div>
 </BaseLayout>

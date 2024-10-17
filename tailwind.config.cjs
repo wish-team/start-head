@@ -17,6 +17,7 @@ export default {
     extend: {
       spacing: {
         24: '6rem', // Ensure this value exists
+		72: '20rem'
       },
       colors: {
         'primary': '#FFD800',

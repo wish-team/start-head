@@ -7,6 +7,7 @@ import Chip from "../components/chip.astro";
 import Globalstyle from "../components/globalstyle.astro";
 import { Cover } from "../components/ui/cover";
 import "@/styles/global.css";
+import Footer from '../components/footer.astro'; // Import the footer component
 
 
 // Put all your links here
@@ -116,7 +117,7 @@ const links: Link[] = [
   </head>
   <body class='bg-[#1e1e1e] flex flex-col justify-start items-center font-[Kodchasan] text-white'>
     <Navigationbar client:load/>
-    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24'>
+    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 mb-8 md:mt-24'>
       <img class="max-w-32 md:max-w-48" src="/logo-starthead2.png"/>
       <h1 class='md:text-6xl text-3xl font-black text-center text-primary'>START HEAD</h1>
       <div>
@@ -156,7 +157,9 @@ const links: Link[] = [
       <a href="https://nftsolana.io" target="_blank"><img class="max-w-12 md:max-w-24" src="/simple-white-min.png"/></a>
       <a href="https://nftdroops.com" target="_blank"><img class="max-w-12 md:max-w-24" src="/NFTdroops-logo.png"/></a>
       </div>
-      <p class='text-center mx-auto'>StartHead©, All rights Reserved.</p>
+      <!-- <p class='text-center mx-auto'>StartHead©, All rights Reserved.</p> -->
     </main>
+    <Footer />  <!-- Add the footer here -->
+
   </body>
 </html>
