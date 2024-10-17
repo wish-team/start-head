@@ -8,7 +8,7 @@ import Globalstyle from "../components/globalstyle.astro";
 import { Cover } from "../components/ui/cover";
 import "@/styles/global.css";
 import Footer from '../components/footer.astro'; // Import the footer component
-
+import RegisterButton from '../components/RegisterButton.jsx'
 
 // Put all your links here
 const links: Link[] = [
@@ -160,6 +160,8 @@ const links: Link[] = [
       <!-- <p class='text-center mx-auto'>StartHead©, All rights Reserved.</p> -->
     </main>
     <Footer />  <!-- Add the footer here -->
-
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white/20 backdrop-blur-lg z-50 flex justify-center items-center py-4">
+        <RegisterButton client:load/>
+  </div>
   </body>
 </html>
