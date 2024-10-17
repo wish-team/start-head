@@ -3,6 +3,7 @@ import { Button } from "flowbite-react";
 import BaseLayout from "../layouts/base.astro";
 import Navigationbar from '../components/navbar';
 import Footer from '../components/footer.astro'; // Import the footer component
+import Roadmap from '../components/Roadmap.jsx'; // Import the Roadmap component
 
 import {
   TextRevealCard,
@@ -37,6 +38,8 @@ import {
                 </p>
             </div>
         </div>
+                <!-- Include the Roadmap here with animations -->
+        <Roadmap client:load/>
     </main>
     
     <!-- Footer -->
