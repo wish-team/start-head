@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/base.astro";
+import Navigationbar from '../components/navbar';
+import Footer from '../components/footer.astro';
+import PartnerComponent from '../components/PartnerComponent';
+---
+
+<BaseLayout title={"Ecosystem"} description={"Explore our partner projects"}>
+    <Navigationbar client:load/>
+    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24 pb-20'>
+        <h1 class="my-8 md:text-6xl text-3xl font-black text-center text-primary">Ecosystem</h1>
+        <PartnerComponent client:load/>
+    </main>
+    <Footer />
+</BaseLayout>
