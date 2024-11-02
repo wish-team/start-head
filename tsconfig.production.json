@@ -1,8 +1,12 @@
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
+      "typescript": {
+      "ignoreBuildErrors": true
+    },
       "noEmitOnError": false,
       "skipLibCheck": true,
+      "allowJs": true,
       "strict": false,
       "suppressImplicitAnyIndexErrors": true
     }

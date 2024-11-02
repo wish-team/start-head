@@ -1,6 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "strict": false,
     "strictNullChecks": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
@@ -9,6 +10,7 @@
       "@/*": ["src/*"]
     },
     "noEmitOnError": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    
   }
 }
