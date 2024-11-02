@@ -1,2 +1,0 @@
-[build]
-command = "tsc --noEmit --skipLibCheck --project tsconfig.production.json && npm run build"
