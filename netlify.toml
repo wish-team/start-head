@@ -1,0 +1,2 @@
+[build]
+command = "tsc --project tsconfig.production.json && npm run build"
