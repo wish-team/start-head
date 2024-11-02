@@ -19,7 +19,7 @@ export default function Navigationbar() {
   };
 
   return (
-    <div className="w-full mb-12 mt-8 md:flex justify-center">
+    <div className="w-full mb-12 mt-12 md:flex justify-center">
       <Navbar
         fluid={true}
         rounded={true}
