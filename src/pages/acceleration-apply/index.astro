@@ -1,34 +1,48 @@
 ---
 import BaseLayout from "@/layouts/base.astro";
 import Navigationbar from '@/components/navbar';
-// import { Input } from "@/components/ui/input"
-import ApplyButton  from "@/components/ApplyButton.jsx";
-
+import ApplyButton from "@/components/ApplyButton.jsx";
+import Countdown from "@/components/Countdown.jsx";
 ---
 
-<BaseLayout title={"Accelerator Apply"} description={"Apply for the decentralized acceleration program starting on April 2, 2025"}>
+<BaseLayout title="Accelerator Application" description="Apply for the Decentralized Acceleration Program, launching April 2, 2025">
     <Navigationbar client:load/>
-    <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24 pb-20'>
-        <div class="">
-            <h1 class="my-8 md:text-6xl text-3xl text-center text-primary">2025 Decentralized Acceleration Program</h1>
-            <div class="items-start">
-            <p class="text-lg text-center text-white mb-4">
-                We are excited to announce the launch of our Decentralized Acceleration Program, commencing on April 2, 2025. This initiative aims to support innovative projects and entrepreneurs within the decentralized ecosystem.
-            </p>
-            <p class="text-lg text-center text-white mb-4">
-                Applications are now open! We encourage all interested parties to submit their proposals by the end of February 2025. Late applications will not be considered.
-            </p>
-            <p class="text-lg text-center text-white mb-4">
-                We are proud to partner with Wish Work to enhance the resources and mentorship available to our participants. Together, we strive to foster innovation and drive impactful change in the decentralized landscape.
-            </p>
-            <p class="text-lg text-center text-white mb-4">
-                Don’t miss this opportunity to elevate your project to new heights. We look forward to reviewing your applications and working together to bring your vision to life.
-            </p>
-        </div>
-            <ApplyButton client:load/>
-            <div class="md:hidden fixed bottom-0 left-0 w-full bg-white/20 backdrop-blur-lg z-50 flex justify-center items-center py-4">
-                <ApplyButton client:load/>
-            </div>
+
+    <!-- Banner Image - Hidden on mobile for simpler layout -->
+    <div class="hidden md:flex justify-center items-center mb-8">
+        <img src="/DALLE.webp" alt="Decentralized Acceleration Program Banner" class="w-[60%] h-auto rounded-lg shadow-lg border border-[#FFD800]" />
     </div>
+
+    <main class="w-full max-w-[90%] md:max-w-[80%] flex flex-col gap-6 md:gap-10 justify-center items-center mx-auto mt-6 md:mt-12 pb-16">
+        
+        <!-- Title & Description with Responsive Font Sizes -->
+        <section class="text-center mb-6 md:mb-8 px-2 md:px-0">
+            <h1 class="my-4 md:my-8 text-3xl md:text-6xl font-bold text-[#FFD800]">2025 Decentralized Acceleration Program</h1>
+            <div class="text-base md:text-lg text-center text-white space-y-3 md:space-y-4">
+                <p>
+                    We are thrilled to announce the upcoming Decentralized Acceleration Program, set to launch on April 2, 2025. This program is dedicated to empowering innovative projects and entrepreneurs within the decentralized ecosystem.
+                </p>
+                <p>
+                    Applications are now open! We invite all interested candidates to submit their proposals by February 2025. Please note that late submissions will not be accepted.
+                </p>
+                <p>
+                    In partnership with <a href="https://wishwork.org" target="_blank" class="text-[#FFD800] underline hover:text-white transition-colors">Wish Work</a>, we are enhancing the resources and mentorship available to participants, fostering innovation and driving meaningful change within the decentralized space.
+                </p>
+                <p>
+                    Seize this opportunity to elevate your project. We look forward to reviewing your applications and collaborating with you to bring your vision to life.
+                </p>
+            </div>
+        </section>
+
+        <!-- Countdown Component -->
+        <Countdown client:load/>
+
+        <!-- Apply Button - Displayed at the bottom on mobile for easy access -->
+        <div class="hidden md:flex justify-center items-center mt-6">
+            <ApplyButton client:load/>
+        </div>
+        <div class="md:hidden fixed bottom-0 left-0 w-full bg-[#1E1E1E]/90 backdrop-blur-lg z-50 flex justify-center items-center py-4 shadow-2xl">
+            <ApplyButton client:load/>
+        </div>
     </main>
 </BaseLayout>
