@@ -8,10 +8,12 @@ import Footer from '../components/footer.astro'; // Import the footer component
 ---
 
 <BaseLayout title={"Team"} description={"The team behind the idea and execution of Start Head"}>
-    <div class="fixed top-0 left-0 w-full bg-black text-white text-center py-2 z-50">
-      <span class="text-sm font-semibold inline-flex items-center gap-2">
-        🚀 Start Head Acceleration Program is openning on December 02, 2024! 🎉 
-        <a href="/acceleration-apply" class="underline ml-2">Read it!</a></div>
+    <div class="fixed top-0 left-0 w-full bg-black text-white text-center py-2 px-4 z-50">
+        <div class="flex flex-col sm:flex-row justify-center items-center text-xs sm:text-sm font-semibold gap-1 sm:gap-2">
+          <span>🚀 Start Head Acceleration Program is opening on December 2, 2024! 🎉</span>
+          <a href="/acceleration-apply" class="underline text-[#FFD800] sm:ml-2">Read it!</a>
+        </div>
+      </div>
     <Navigationbar client:load/>
     <main class='w-[80%] flex flex-col gap-8 justify-center items-center mt-8 md:mt-24 pb-20'>
         
