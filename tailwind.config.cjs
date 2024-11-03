@@ -1,5 +1,7 @@
 import flowbite from "flowbite-react/tailwind";
-
+const {
+	default: flattenColorPalette,
+  } = require("tailwindcss/lib/util/flattenColorPalette");
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", 		
@@ -84,5 +86,16 @@ export default {
   		}
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require('flowbite/plugin'), flowbite.plugin()],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require('flowbite/plugin'), flowbite.plugin(), addVariablesForColors ],
 };
+
+function addVariablesForColors({ addBase, theme }: any) {
+	let allColors = flattenColorPalette(theme("colors"));
+	let newVars = Object.fromEntries(
+	  Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+   
+	addBase({
+	  ":root": newVars,
+	});
+  }

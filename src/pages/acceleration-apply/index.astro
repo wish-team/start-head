@@ -3,51 +3,70 @@ import BaseLayout from "@/layouts/base.astro";
 import Navigationbar from '@/components/navbar';
 import ApplyButton from "@/components/ApplyButton.jsx";
 import Countdown from "@/components/Countdown.jsx";
+import { TracingBeam } from "@/components/ui/tracing-beam";
+import Footer from "@/components/footer.astro";
 ---
 
-<BaseLayout title="Accelerator Application" description="Apply for the Decentralized Acceleration Program, starting at April 2, 2025">
-    <Navigationbar client:load/>
+<BaseLayout title="Accelerator Application" description="Apply for the Decentralized Acceleration Program, launching April 2, 2025">
+    <TracingBeam client:load>
+        <Navigationbar client:load />
 
-    <!-- Banner Image - Hidden on mobile for simpler layout -->
-    <div class="hidden md:flex justify-center items-center mb-8">
-        <img src="/acceleration/acceleration-web.jpeg" alt="Decentralized Acceleration Program Banner" class="w-[60%] h-auto rounded-lg shadow-lg border border-[#FFD800]" />
-    </div>
-    <div class="md:hidden flex justify-center items-center mb-8">
-        <img src="/acceleration/acceleration.png" alt="Decentralized Acceleration Program Banner" class="w-[60%] h-auto rounded-lg shadow-lg border border-[#FFD800]" />
-    </div>
-    <span class="bottom-2 right-2 text-[10px] text-white/70 backdrop-blur-md">
-        Image for @barbe_generative_diary - The Shape of Sound
-    </span>
-    <main class="w-full max-w-[90%] md:max-w-[80%] flex flex-col gap-6 md:gap-10 justify-center items-center mx-auto mt-6 md:mt-12 pb-16">
-        
-        <!-- Title & Description with Responsive Font Sizes -->
-        <section class="text-center mb-6 md:mb-8 px-2 md:px-0">
-            <h1 class="my-4 md:my-8 text-3xl md:text-6xl font-bold text-[#FFD800]">2025 Decentralized Acceleration Program</h1>
-            <div class="text-base md:text-lg text-center text-white space-y-3 md:space-y-4">
-                <p>
-                    We are thrilled to announce the upcoming Decentralized Acceleration Program, set to launch on April 2, 2025. This program is dedicated to empowering innovative projects and entrepreneurs within the decentralized ecosystem.
+        <!-- Banner Image - Hidden on mobile for a cleaner layout -->
+        <div class="hidden md:flex justify-center items-center mb-8">
+            <img src="/acceleration/acceleration-web.jpeg" alt="Decentralized Acceleration Program Banner" class="w-[60%] h-auto rounded-lg shadow-lg border border-[#FFD800]" />
+        </div>
+        <div class="md:hidden flex justify-center items-center mb-8">
+            <img src="/acceleration/acceleration.png" alt="Decentralized Acceleration Program Banner" class="w-[60%] h-auto rounded-lg shadow-lg border border-[#FFD800]" />
+        </div>
+        <div class="flex justify-center items-center">
+            <span class="bottom-2 text-[10px] text-white/70 backdrop-blur-md">
+                Image for @barbe_generative_diary - The Shape of Sound
+            </span>
+        </div>
+
+        <main class="w-full max-w-[90%] md:max-w-[80%] flex flex-col gap-6 md:gap-10 justify-center items-center mx-auto mt-6 md:mt-12 pb-16">
+            
+            <!-- Program Title & Description -->
+            <section class="text-center mb-6 md:mb-8 px-2 md:px-0">
+                <h1 class="my-4 md:my-8 text-4xl md:text-6xl font-bold text-[#FFD800] drop-shadow-md">2025 Decentralized Acceleration Program</h1>
+                <div class="text-base md:text-lg text-center text-white space-y-3 md:space-y-4 leading-relaxed">
+                    <p class="max-w-3xl mx-auto">
+                        We are excited to open applications for the <span class="font-semibold text-[#FFD800]">2025 Decentralized Acceleration Program</span>, launching on <span class="font-semibold text-[#FFD800]">April 2, 2025</span>. This program is tailored to empower innovative projects and entrepreneurs advancing the decentralized ecosystem.
+                    </p>
+                    <p class="max-w-3xl mx-auto">
+                        Applications are open until <span class="font-semibold text-[#FFD800]">February 2025</span>. Join us to gain invaluable resources, mentorship, and networking opportunities to accelerate your project's growth.
+                    </p>
+                    <p class="max-w-3xl mx-auto">
+                        In collaboration with <a href="https://wishwork.org" target="_blank" class="text-[#FFD800] underline hover:text-white transition-colors">Wish Work</a>, we’re providing a robust support structure, fostering impactful innovation, and advancing projects at the forefront of decentralization.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Program Highlights -->
+            <section class="bg-[#1E1E1E] text-white rounded-lg shadow-md p-6 md:p-10 mb-8 md:mb-12 w-full max-w-3xl text-center">
+                <h2 class="text-2xl md:text-3xl font-semibold text-[#FFD800] mb-4">Why Join Our Accelerator Program?</h2>
+                <p class="mb-4 text-lg md:text-xl leading-relaxed">
+                    Selected teams receive up to <span class="text-[#FFD800] font-bold">$50,000</span> in grant funding to bring their ideas to life.
                 </p>
-                <p>
-                    Applications are now open! We invite all interested candidates to submit their proposals by February 2025. Please note that late submissions will not be accepted.
+                <p class="mb-4 text-lg md:text-xl leading-relaxed">
+                    Access an exclusive accelerator ecosystem with cutting-edge resources, hands-on mentorship, and strategic marketing opportunities tailored to empower your project's success.
                 </p>
-                <p>
-                    In partnership with <a href="https://wishwork.org" target="_blank" class="text-[#FFD800] underline hover:text-white transition-colors">Wish Work</a>, we are enhancing the resources and mentorship available to participants, fostering innovation and driving meaningful change within the decentralized space.
+                <p class="text-lg md:text-xl leading-relaxed">
+                    Join us to fast-track your innovation, connect with industry experts, and elevate your project within the decentralized landscape.
                 </p>
-                <p>
-                    Seize this opportunity to elevate your project. We look forward to reviewing your applications and collaborating with you to bring your vision to life.
-                </p>
+            </section>
+
+            <!-- Countdown Component -->
+            <Countdown client:load />
+
+            <!-- Apply Button - Positioned for Easy Access on Mobile -->
+            <div class="hidden md:flex justify-center items-center mt-6">
+                <ApplyButton client:load />
             </div>
-        </section>
-
-        <!-- Countdown Component -->
-        <Countdown client:load/>
-
-        <!-- Apply Button - Displayed at the bottom on mobile for easy access -->
-        <div class="hidden md:flex justify-center items-center mt-6">
-            <ApplyButton client:load/>
-        </div>
-        <div class="md:hidden fixed bottom-0 left-0 w-full bg-[#1E1E1E]/90 backdrop-blur-lg z-50 flex justify-center items-center py-4 shadow-2xl">
-            <ApplyButton client:load/>
-        </div>
-    </main>
+            <div class="md:hidden fixed bottom-0 left-0 w-full bg-[#1E1E1E]/90 backdrop-blur-lg z-50 flex justify-center items-center py-4 shadow-2xl">
+                <ApplyButton client:load />
+            </div>
+        </main>
+    </TracingBeam>
+    <Footer />
 </BaseLayout>
