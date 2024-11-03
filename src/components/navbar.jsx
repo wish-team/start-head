@@ -25,6 +25,9 @@ export default function Navigationbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // Determine if a dropdown item is active
+  const isDevelopersActive = activePath.startsWith('/developers');
+
   return (
     <div className="w-full mb-12 mt-12 md:flex justify-center">
       <Navbar
@@ -75,21 +78,21 @@ export default function Navigationbar() {
                 <div className="relative">
                   <span
                     onClick={toggleDropdown}
-                    className="cursor-pointer flex items-center px-4 py-2 rounded-sm text-white hover:text-primary transition-all"
+                    className={`cursor-pointer flex items-center px-4 py-2 rounded-sm ${isDevelopersActive ? 'text-primary bg-[#1e1e1e]' : 'text-white'} hover:text-primary transition-all`}
                     style={{ margin: '0.5rem 1rem' }}
                   >
                     Developers <FaChevronDown className="ml-2" />
                   </span>
                   {isDropdownOpen && (
                     <div className="absolute left-0 mt-2 w-full bg-[#1e1e1e] border border-white rounded-md shadow-lg transition duration-200">
-                      <a href="/lets-build" className="block px-4 py-2 text-white hover:bg-primary transition-all">
+                      <a href="/developers/build" className="block px-4 py-2 text-white hover:bg-primary transition-all">
                         Let's Build
                       </a>
                       <a href="/developers/docs/getting-started" className="block px-4 py-2 text-white hover:bg-primary transition-all">
                         Docs
                       </a>
-                      <a href="/dacceleration-requirement" className="block px-4 py-2 text-white hover:bg-primary transition-all">
-                        DAcceleration Requirement
+                      <a href="/acceleration-apply" className="block px-4 py-2 text-white hover:bg-primary transition-all">
+                        DAcceleration Program
                       </a>
                     </div>
                   )}
@@ -125,7 +128,7 @@ export default function Navigationbar() {
 
           {/* Developers Dropdown Link */}
           <div className="relative flex items-center cursor-pointer" onClick={toggleDropdown}>
-            <span className="flex items-center py-2 rounded-full text-white hover:text-primary transition-all" style={{ padding: '0.5rem 1rem' }}>
+            <span className={`flex items-center py-2 rounded-full ${isDevelopersActive ? 'text-primary bg-[#1e1e1e]' : 'text-white'} hover:text-primary transition-all`} style={{ padding: '0.5rem 1rem' }}>
               Developers <FaChevronDown className="ml-2" />
             </span>
             {isDropdownOpen && (
