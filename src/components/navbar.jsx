@@ -48,7 +48,7 @@ export default function Navigationbar() {
         {isOpen && (
           <div className="top-12 mb-12 left-0 w-full h-[calc(100vh-10rem)] z-60 relative">
             <div className="h-[calc(100vh-2rem)] mb-8">
-              <Navbar.Collapse className="flex flex-col gap-4 overflow-auto">
+              <Navbar.Collapse className="flex flex-col gap-4">
                 <Navbar.Link
                   href="/vision"
                   className={`px-4 py-2 rounded-sm border-none hover:text-primary ${activePath === '/vision/' ? 'text-primary bg-[#1e1e1e]' : 'text-white'} transition-all`}
@@ -85,7 +85,7 @@ export default function Navigationbar() {
                       <a href="/lets-build" className="block px-4 py-2 text-white hover:bg-primary transition-all">
                         Let's Build
                       </a>
-                      <a href="/docs" className="block px-4 py-2 text-white hover:bg-primary transition-all">
+                      <a href="/developers/docs/getting-started" className="block px-4 py-2 text-white hover:bg-primary transition-all">
                         Docs
                       </a>
                       <a href="/dacceleration-requirement" className="block px-4 py-2 text-white hover:bg-primary transition-all">
@@ -125,15 +125,15 @@ export default function Navigationbar() {
 
           {/* Developers Dropdown Link */}
           <div className="relative flex items-center cursor-pointer" onClick={toggleDropdown}>
-            <span className="flex items-center py-2 rounded-full text-white hover:text-primary transition-all">
+            <span className="flex items-center py-2 rounded-full text-white hover:text-primary transition-all" style={{ padding: '0.5rem 1rem' }}>
               Developers <FaChevronDown className="ml-2" />
             </span>
             {isDropdownOpen && (
               <div className="absolute mt-48 w-48 bg-[#1e1e1e] border border-white rounded-md shadow-lg transition duration-200">
-                <a href="/lets-build" className="block px-4 py-2 text-white hover:bg-primary transition-all">
+                <a href="/developers/build" className="block px-4 py-2 text-white hover:bg-primary transition-all">
                   Let's Build
                 </a>
-                <a href="/docs" className="block px-4 py-2 text-white hover:bg-primary transition-all">
+                <a href="/developers/docs/getting-started" className="block px-4 py-2 text-white hover:bg-primary transition-all">
                   Docs
                 </a>
                 <a href="/acceleration-apply" className="block px-4 py-2 text-white hover:bg-primary transition-all">
