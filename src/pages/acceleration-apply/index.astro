@@ -5,14 +5,19 @@ import ApplyButton from "@/components/ApplyButton.jsx";
 import Countdown from "@/components/Countdown.jsx";
 ---
 
-<BaseLayout title="Accelerator Application" description="Apply for the Decentralized Acceleration Program, launching April 2, 2025">
+<BaseLayout title="Accelerator Application" description="Apply for the Decentralized Acceleration Program, starting at April 2, 2025">
     <Navigationbar client:load/>
 
     <!-- Banner Image - Hidden on mobile for simpler layout -->
     <div class="hidden md:flex justify-center items-center mb-8">
-        <img src="/DALLE.webp" alt="Decentralized Acceleration Program Banner" class="w-[60%] h-auto rounded-lg shadow-lg border border-[#FFD800]" />
+        <img src="/acceleration/acceleration-web.jpeg" alt="Decentralized Acceleration Program Banner" class="w-[60%] h-auto rounded-lg shadow-lg border border-[#FFD800]" />
     </div>
-
+    <div class="md:hidden flex justify-center items-center mb-8">
+        <img src="/acceleration/acceleration.png" alt="Decentralized Acceleration Program Banner" class="w-[60%] h-auto rounded-lg shadow-lg border border-[#FFD800]" />
+    </div>
+    <span class="bottom-2 right-2 text-[10px] text-white/70 backdrop-blur-md">
+        Image for @barbe_generative_diary - The Shape of Sound
+    </span>
     <main class="w-full max-w-[90%] md:max-w-[80%] flex flex-col gap-6 md:gap-10 justify-center items-center mx-auto mt-6 md:mt-12 pb-16">
         
         <!-- Title & Description with Responsive Font Sizes -->
